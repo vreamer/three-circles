@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [goal, setGoal] = useState(false)
+  const [action, setAction] = useState(false)
+  const [knowledge, setKnowledge] = useState(false)
+
   return (
     <div className='app-container'>
       <h3>Three Circles</h3>
       <div className='three-circles-container'>
-        <div className='goal-circle'></div>
-        <div className='action-circle'></div>
-        <div className='knowledge-circle'></div>
+        <div onClick={() => setGoal(!goal)} className={'goal-circle' + (goal ? ' selected' : '')}></div>
+        <div onClick={() => setAction(!action)} className={'action-circle' + (action ? ' selected' : '')}></div>
+        <div onClick={() => setKnowledge(!knowledge)} className={'knowledge-circle' + (knowledge ? ' selected' : '')}></div>
       </div>
     </div>
   );
