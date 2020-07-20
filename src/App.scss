@@ -1,54 +1,30 @@
-.app-container{
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.three-circles-container {
-  width: 18rem;
-  height: 16rem;
-  position: relative;
-}
+  svg {
+    circle {
+      stroke: black;
+      stroke-width: 3;
+      fill: transparent;
+      opacity: 0.6;
 
-.goal-circle {
-  width: 10rem;
-  height: 10rem;
-  border: 2px solid #991616;
-  border-radius: 50%;
-  position: absolute;
-  left: 4.5rem;
+      &.goals.selected {
+        fill: red;
+        opacity: 0.6;
+      }
 
-  &.selected {
-    background-color: rgba(253, 186, 186, 0.6);
+      &.actions.selected {
+        fill: yellow;
+        opacity: 0.6;
+      }
+
+      &.knowledge.selected {
+        fill: blue;
+        opacity: 0.6;
+      }
+
+    }
   }
 }
-
-.action-circle {
-  width: 10rem;
-  height: 10rem;
-  border: 2px solid #938614;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  &.selected {
-    background-color: rgba(253, 255, 177, 0.6);
-  }
-}
-
-.knowledge-circle {
-  width: 10rem;
-  height: 10rem;
-  border: 2px solid #24527B;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  &.selected {
-    background-color: rgba(192, 251, 244, 0.6);
-  }
-}
-
-
